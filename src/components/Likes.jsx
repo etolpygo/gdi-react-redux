@@ -53,7 +53,7 @@ class Likes extends Component {
 		return (
 			<div className="Likes">
 				<span>{ this.state.numLikes } likes</span>
-				<button className="Likes-like-button" onClick={this.handleLikeButtonClick}>
+				<button className="LikesButton" onClick={this.handleLikeButtonClick}>
 					{ this.state.liked ? 'Liked!' : 'Not liked (yet)' }
 				</button>
 			</div>
