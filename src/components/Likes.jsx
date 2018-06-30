@@ -13,16 +13,35 @@
 	 // add a render method
 	 // change props from function argument to object attribute
 
+// Exercise 5: State It
+// Create a button that toggles between two states: "Liked" and "Not liked (yet)"
+	 // add a constructor with initial state
+	 // add a button to the rendered JSX with an onClick attribute
+	 // add a method to handle the click/ change the state
+	 // hook up the button text to the state
+
 import React, { Component } from 'react';
 
 class Likes extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			liked: false
+		};
+		this.handleLikeButtonClick = this.handleLikeButtonClick.bind(this);
+	}
+	handleLikeButtonClick() {
+		this.setState({
+			liked: !this.state.liked
+		});
+	}
 	render() {
 		const { totalLikes } = this.props;
 		return (
 			<div className="Likes">
 				<span>{ totalLikes } likes</span>
-				<button className="LikesButton">
-					Like
+				<button className="Likes-like-button" onClick={this.handleLikeButtonClick}>
+					{ this.state.liked ? 'Liked!' : 'Not liked (yet)' }
 				</button>
 			</div>
 		);
