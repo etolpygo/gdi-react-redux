@@ -24,7 +24,6 @@
 	 // increase or decrease the likes based on whether button click is like/ unlike
 	 // hint: take the total likes as a prop, and convert it to state
 
-
 import React, { Component } from 'react';
 
 class Likes extends Component {
@@ -59,5 +58,3 @@ class Likes extends Component {
 		);
 	}
 }
-
-export default Likes;
