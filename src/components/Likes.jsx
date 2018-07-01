@@ -8,3 +8,15 @@ import React from 'react';
 
 // Exercise 3: Prop It Up
 // Likes should take in number of likes as a prop and display it.
+
+const Likes = (props) => {
+	const { numLikes } = props;
+	return (
+	  <div className="Likes">
+	    <span>{numLikes} likes</span>
+		<button>like!</button>
+	  </div>
+	);
+}
+
+export default Likes;

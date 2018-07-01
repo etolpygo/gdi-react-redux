@@ -1,4 +1,6 @@
 import React from 'react';
+import FeedItem from './FeedItem.jsx';
+
 
 // Exercise 2: Set It Up
 // write a functional component
@@ -10,4 +12,19 @@ import React from 'react';
 // FeedList should accept props as params
 // Destructure photos from props
 // Iterate over the data and map each photo data to a FeedItem
+
+const FeedList = (props) => {
+	const { photos } = props;
+	const photoItems = photos.map((photo) =>
+		<FeedItem photo={photo} key={photo.id} />
+	);
+	return(
+		<div className="FeedList">
+			{photoItems}
+		</div>
+	);
+} 
+
+export default FeedList
+
 

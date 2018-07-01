@@ -8,3 +8,14 @@ import HomePage from './pages/HomePage.jsx';
 // import Header and Hompage
 // include them inside of App
 // export the App component!
+
+const App = () => {
+	return (
+	  <div className="appContainer">
+	    <Header />
+	    <HomePage />
+	  </div>
+	);
+}
+
+export default App;

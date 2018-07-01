@@ -1,4 +1,5 @@
 import React from 'react';
+import Likes from './Likes.jsx';
 
 // Exercise 2: Set It Up
 // write a functional component
@@ -13,3 +14,15 @@ import React from 'react';
 // Hint: What do you need in order to get the image to display?
 // Hint what do you need in order to get likes to display in the Likes component?
 
+const FeedItem = (props) => {
+	const { photo } = props;
+	return (
+	  <div className="FeedItem">
+		<h4>{photo.title}</h4>
+		<img src={photo.url} />
+      	<Likes numLikes={photo.likes} />
+	  </div>
+	);
+}
+
+export default FeedItem;
