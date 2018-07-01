@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 // Exercise 2: Set It Up
 // write a functional component
 // make it a ul with a class name of Header
@@ -20,3 +21,14 @@ const Header = () => {
 }
 
 export default Header;
+
+  // write a functional component
+  // make it a ul with a class name of Header
+  // make four li: GDInsta, Home, About, Profile
+  // put class name of Logo on the li element with GDInsta
+  // export the component!
+
+// Exercise 7: Routing
+  // import Link from react-router-dom
+  // use the Link component to link to each route with a 'to' property
+  // check that your links work!
