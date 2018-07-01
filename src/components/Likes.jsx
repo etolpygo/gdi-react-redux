@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 // Exercise 2: Set It Up
 	// write a functional component
@@ -9,14 +9,16 @@ import React from 'react';
 // Exercise 3: Prop It Up
 // Likes should take in number of likes as a prop and display it.
 
-const Likes = (props) => {
-	const { numLikes } = props;
-	return (
-	  <div className="Likes">
-	    <span>{numLikes} likes</span>
-		<button>like!</button>
-	  </div>
-	);
+class Likes extends Component {
+	render() {
+		const { numLikes } = this.props;
+		return (
+		  <div className="Likes">
+		    <span>{numLikes} likes</span>
+			<button>like!</button>
+		  </div>
+		);
+	}
 }
 
 export default Likes;
