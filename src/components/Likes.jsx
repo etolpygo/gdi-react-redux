@@ -1,8 +1,8 @@
 // Exercise 2: Set It Up
-// write a functional component
-// make it a div with a class name of Likes
-// write a span and a button element inside
-// export the component!
+	// write a functional component
+	// make it a div with a class name of Likes
+	// write a span and a button element inside
+	// export the component!
 
 // Exercise 3: Prop It Up
 // Likes should take in number of likes as a prop and display it.
@@ -19,8 +19,10 @@
 	 // add a button to the rendered JSX with an onClick attribute
 	 // add a method to handle the click/ change the state
 	 // hook up the button text to the state
-// BONUS: Create a counter that increases/ decreases the likes on button clicks
-// BONUS BONUS: Use a prop to determine the number of likes to start at
+// BONUS: Create a likes counter
+	 // take in a prop for the number of likes
+	 // increase or decrease the likes based on whether button click is like/ unlike
+	 // hint: take the total likes as a prop, and convert it to state
 
 import React, { Component } from 'react';
 
@@ -31,9 +33,9 @@ class Likes extends Component {
 			numLikes: this.props.totalLikes,
 			liked: false
 		};
-		this.handleLikeButtonClick = this.handleLikeButtonClick.bind(this);
 	}
-	handleLikeButtonClick() {
+
+	handleLikeButtonClick = () => {
 		let { numLikes } = this.state;
 		if (this.state.liked) {
 			numLikes -= 1;
@@ -46,13 +48,14 @@ class Likes extends Component {
 			liked: !this.state.liked
 		});
 	}
+
 	render() {
 		return (
 			<div className="Likes">
 				<span>{ this.state.numLikes } likes</span>
-				<span className="Likes-like-button" onClick={this.handleLikeButtonClick}>
+				<button className="Likes-like-button" onClick={this.handleLikeButtonClick}>
 					{ this.state.liked ? 'Liked!' : 'Not liked (yet)' }
-				</span>
+				</button>
 			</div>
 		);
 	}

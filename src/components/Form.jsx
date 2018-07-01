@@ -6,10 +6,9 @@ class Form extends React.Component {
 		this.state = {
 			userInput: ''
 		};
-		this.handleFormSubmit = this.handleFormSubmit.bind(this);
-		this.handleInputChange = this.handleInputChange.bind(this);
 	}
-	handleFormSubmit(event) {
+
+	handleFormSubmit = (event) => {
 		event.preventDefault();
 		console.log('submitting')
 		this.props.handleAddPhoto(this.state.userInput);
@@ -17,16 +16,20 @@ class Form extends React.Component {
 			userInput: ''
 		});
 	}
-	handleInputChange(event) {
+
+	handleInputChange = (event) => {
 		const value = event.target.value;
 		this.setState({
 			userInput: value
 		});
 	}
+
 	render() {
 		return (
 			<form className="Form">
-				<input placeholder="enter a url here" value={this.state.userInput} onChange={this.handleInputChange} />
+				<input placeholder="enter a url here"
+							 value={this.state.userInput}
+							 onChange={this.handleInputChange} />
 				<button onClick={this.handleFormSubmit}>Submit</button>
 			</form>
 		);

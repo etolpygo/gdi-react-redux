@@ -1,3 +1,10 @@
+// Exercise 2: Set It Up
+	// write a functional component
+	// make it a div with a class name of App
+	// import Header and Homepage
+	// include them inside of App
+	// export the App component!
+
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom'
 import ProfilePage from './pages/ProfilePage.jsx';
@@ -5,7 +12,6 @@ import AboutPage from './pages/AboutPage.jsx';
 import HomePage from './pages/HomePage.jsx';
 import Header from './components/Header.jsx';
 
-// how do we want to divide up where to put BrowserRouter, Provider, etc? We could put it in index.js
 const App = () => {
   return (
     <BrowserRouter>
