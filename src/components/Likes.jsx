@@ -19,6 +19,10 @@
 	 // add a button to the rendered JSX with an onClick attribute
 	 // add a method to handle the click/ change the state
 	 // hook up the button text to the state
+// BONUS: Create a likes counter
+	 // take in a prop for the number of likes
+	 // increase or decrease the likes based on whether button click is like/ unlike
+	 // hint: take the total likes as a prop, and convert it to state
 
 import React, { Component } from 'react';
 
@@ -46,5 +50,3 @@ class Likes extends Component {
 		);
 	}
 }
-
-export default Likes;

@@ -21,7 +21,10 @@
     "webpack-dev-server": "^2.5.1"
   },
   "dependencies": {
+<<<<<<< HEAD
     "babel-eslint": "^8.2.5",
+=======
+>>>>>>> start
     "babel-plugin-transform-class-properties": "^6.24.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
