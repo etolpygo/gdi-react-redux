@@ -28,9 +28,8 @@ class Likes extends Component {
 		this.state = {
 			liked: false
 		};
-		this.handleLikeButtonClick = this.handleLikeButtonClick.bind(this);
 	}
-	handleLikeButtonClick() {
+	handleLikeButtonClick = () => {
 		this.setState({
 			liked: !this.state.liked
 		});
