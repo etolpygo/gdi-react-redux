@@ -14,14 +14,12 @@
 	// set up Route to with paths to each page (hint: HomePage should "/") and with the appropriate component
 
 import React from 'react';
+import { BrowserRouter, Route } from 'react-router-dom'
 import Header from './components/Header.jsx';
+import AboutPage from './pages/AboutPage.jsx';
+import ProfilePage from './pages/ProfilePage.jsx';
 import HomePage from './pages/HomePage.jsx';
 
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faStroopwafel } from '@fortawesome/free-solid-svg-icons'
-
-library.add(faStroopwafel)
 
 // Exercise 2: Set It Up
 // write a functional component
@@ -32,10 +30,14 @@ library.add(faStroopwafel)
 
 const App = () => {
 	return (
-	  <div className="appContainer">
-	    <Header />
-	    <HomePage />
-	  </div>
+		<BrowserRouter>
+		  <div className="appContainer">
+		    <Header />
+			<Route exact path="/" component={HomePage} />
+			<Route exact path="/about" component={AboutPage} />
+			<Route exact path="/profile" component={ProfilePage} />
+		  </div>
+		</BrowserRouter>
 	);
 }
 

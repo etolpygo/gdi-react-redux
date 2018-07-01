@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 
 // Exercise 2: Set It Up
@@ -12,9 +13,9 @@ const Header = () => {
   return(
   	<ul className="Header">
   	  <li className="Logo">GDInsta</li>
-	  <li>Home</li>
-	  <li>About</li>
-	  <li>Profile</li>
+	  <li><Link to="/">Home</Link></li>
+	  <li><Link to="/about">About</Link></li>
+	  <li><Link to="/profile">Profile</Link></li>
   	</ul>
     
   )
