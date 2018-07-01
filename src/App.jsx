@@ -17,7 +17,6 @@ import React from 'react';
 import Header from './components/Header.jsx';
 import HomePage from './pages/HomePage.jsx';
 
-<<<<<<< HEAD
 // Exercise 2: Set It Up
 // write a functional component
 // make it a div with a class name of App
@@ -35,5 +34,3 @@ const App = () => {
 }
 
 export default App;
-=======
->>>>>>> b3e5aa2c95eb8be0d0e0e6ad8e9050b5a55570f7
