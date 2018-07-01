@@ -10,12 +10,37 @@ import React, { Component } from 'react';
 // Likes should take in number of likes as a prop and display it.
 
 class Likes extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			liked: false,
+			buttonText: 'like!',
+			numLikes: this.props.numLikes
+		}
+	}
+	updateLike = () => {
+		let previousLikes = this.state.numLikes;
+		if (this.state.liked) {
+			this.setState({ 
+				liked: false, 
+				buttonText: 'like!', 
+				numLikes: (previousLikes - 1) 
+			});
+		}
+		else {
+			this.setState({ 
+				liked: true, 
+				buttonText: 'unlike',
+				numLikes: previousLikes + 1
+				
+			});
+		}
+	}
 	render() {
-		const { numLikes } = this.props;
 		return (
 		  <div className="Likes">
-		    <span>{numLikes} likes</span>
-			<button>like!</button>
+		    <span>{this.state.numLikes} likes</span>
+			<button onClick = { this.updateLike }>{this.state.buttonText}</button>
 		  </div>
 		);
 	}
