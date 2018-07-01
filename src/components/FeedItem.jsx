@@ -16,11 +16,11 @@ import Likes from './Likes.jsx';
 
 const FeedItem = (props) => {
   const { photo } = props;
-  const { url, likes } = photo;
+  const { url, likes, id } = photo;
   return (
     <div className="FeedItem">
       <img className="Image" src={ url } />
-      <Likes totalLikes={likes} id={id} userLiked={userLiked} />
+      <Likes totalLikes={likes} id={id} />
     </div>
   );
 };

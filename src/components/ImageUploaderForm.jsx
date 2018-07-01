@@ -35,3 +35,5 @@ class ImageUploaderForm extends React.Component {
 		);
 	}
 }
+
+export default ImageUploaderForm;
