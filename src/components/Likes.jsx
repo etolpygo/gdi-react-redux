@@ -37,3 +37,5 @@ const Likes = (props) => {
 		</div>
 	);
 }
+
+export default Likes;
