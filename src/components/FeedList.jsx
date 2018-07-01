@@ -18,7 +18,7 @@ const FeedList = (props) => {
     <div className="FeedList">
       {
         photos.map((photo, i) =>
-          <FeedItem photo={photo} />
+          <FeedItem photo={photo} key={i} />
         )
       }
     </div>
