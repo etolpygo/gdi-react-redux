@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 // Exercise 2: Set It Up
 	// write a functional component
@@ -30,7 +31,7 @@ class Likes extends Component {
 		else {
 			this.setState({ 
 				liked: true, 
-				buttonText: 'unlike',
+				buttonText: 'unlike :(',
 				numLikes: previousLikes + 1
 				
 			});

@@ -26,7 +26,11 @@ module.exports = {
     loaders: [
       // test determines which file extensions to run the loader on
       { test: /\.jsx?$/, loader: 'babel-loader', exclude: /node_modules/ },
-      { test: /\.css$/, use: ['style-loader', 'css-loader']}
+      { test: /\.css$/, use: ['style-loader', 'css-loader']}, 
+	  {
+        test: /\.(jpe?g|gif|svg|png|eot|svg|woff2|woff|ttf)$/,
+        loader: 'file-loader'
+      }
     ]
   }
 };

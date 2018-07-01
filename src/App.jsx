@@ -17,6 +17,12 @@ import React from 'react';
 import Header from './components/Header.jsx';
 import HomePage from './pages/HomePage.jsx';
 
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faStroopwafel } from '@fortawesome/free-solid-svg-icons'
+
+library.add(faStroopwafel)
+
 // Exercise 2: Set It Up
 // write a functional component
 // make it a div with a class name of App
