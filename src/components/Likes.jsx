@@ -39,3 +39,5 @@ class Likes extends Component {
 		);
 	}
 }
+
+export default Likes;
