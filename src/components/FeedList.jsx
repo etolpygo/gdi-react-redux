@@ -4,6 +4,11 @@
 	// import FeedItem and include it inside the div
 	// export the component!
 
+// Exercise 3: Prop It Up
+	// FeedList should accept props as params
+	// destructure photos from props
+	// iterate over the data and map each photo data to a FeedItem
+
 import React from 'react';
 import FeedItem from './FeedItem.jsx';
 
