@@ -1,3 +1,3 @@
 # Intro to React + Redux
 
-You can find the exercise solutions on this branch.
+Branch for my work on the workshop exercises.
